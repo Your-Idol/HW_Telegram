@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>ContactItem.qml</file>
+        <file>icons/OUE3Bwp0SzI.jpg</file>
+        <file>ContactList.qml</file>
     </qresource>
 </RCC>
