@@ -1,4 +1,4 @@
 # HW_Telegram
 ### Проект списка контактов, старался спародировать десктоп версию Telegram, конечно же ничего не получилось. 
 ### Надеюсь Паша Дуров этого не увидит...
-![alt text](HW_Telegram/screen/example.jpg)
+![alt text](screen/example.jpg)
