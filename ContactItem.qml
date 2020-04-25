@@ -6,14 +6,12 @@ Rectangle {
     id: me
 
     property alias icon: icon.source
-    property alias text: lable1.text
+    property alias text: label.text
+    property alias being: lastMessage.text
     property bool selected: false
 
     signal leftClick()
     signal rightClick()
-
-    width: parent.width
-    height: 60
 
     color: {
         if (selected)
@@ -23,24 +21,30 @@ Rectangle {
         return "white";
     }
 
+    width: parent.width
+    height: 60
+
     RowLayout{
         anchors.fill: parent
+        spacing: 0
         anchors.leftMargin: 4
         anchors.rightMargin: 4
-        spacing: 7
         Image {
             id: icon
-            fillMode: Image.PreserveAspectCrop
-            source: "icons/OUE3Bwp0SzI.jpg"
+            source: "icons/tg.png"
             Layout.fillHeight: true
             Layout.preferredWidth: height
-            Layout.margins: 7
+            Layout.margins: 4
         }
-        Label{
-            id: lable1
-            Layout.fillWidth: true
-            font.bold: true
-
+        ColumnLayout{
+            Label{
+                id:label
+                font.bold:true
+            }
+            Label{
+                id:lastMessage
+                text:"you are not allowed to write messages"
+            }
         }
     }
     MouseArea{

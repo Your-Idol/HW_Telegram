@@ -5,22 +5,37 @@ import QtQuick.Layouts 1.13
 
 Window {
     visible: true
-    width: 320
-    height: 480
+    color: "gray"
+    width: 420
+    height: 550
     title: qsTr("Contacts")
 
     ListModel{
         id: contactsModel
         ListElement{
             name: "Алина"
+            pic: "icons/Alina.jpg"
+            lastMes: "I think I love Kostya ... he became the meaning of my life"
+
         }
         ListElement{
             name: "Костя"
+            pic: "icons/Kostya.jpg"
+            lastMes: "well bro? beer today? I bought UFC3 on PS, call the boys, there will be a contest."
+
+        }
+        ListElement{
+            name: "Admin"
+            lastMes: "once again you will go to the public of Hydra and we will really arrange problems for you."
+
         }
     }
 
     ColumnLayout{
         anchors.fill: parent
+        SearchBox{
+            Layout.fillWidth: true
+        }
         MainToolBar{
             Layout.fillWidth: true
             onNewItem: {

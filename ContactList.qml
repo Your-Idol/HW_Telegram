@@ -3,12 +3,14 @@ import QtQuick.Window 2.13
 import QtQuick.Controls 2.13
 
 ListView{
-    id: list
+    id:list
     clip: true
     boundsBehavior: ListView.StopAtBounds
     ScrollBar.vertical: ScrollBar{}
     delegate: ContactItem{
         text: name
+        icon: pic
+        being: lastMes
         selected: list.currentIndex === index
         onLeftClick: {
             list.currentIndex = index
