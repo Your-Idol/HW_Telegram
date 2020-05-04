@@ -9,6 +9,7 @@ RowLayout {
         id: textFiled
         Layout.fillWidth: true
         selectByMouse: true
+        focus: true
     }
 
     function add(){
@@ -18,6 +19,7 @@ RowLayout {
 
     Button{
         text: "Add"
+        highlighted: true
         onClicked: {
             add();
         }

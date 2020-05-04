@@ -46,6 +46,20 @@ Window {
             Layout.fillHeight: true
             Layout.fillWidth: true
             model: contactsModel
+            onMenu: {
+                contactListMenu.popup();
+            }
+        }
+    }
+
+    Menu{
+        id: contactListMenu
+        modal: true
+        MenuItem{
+            text: "Delete"
+            onTriggered: {
+                contactsModel.remove(list.menuIndex);
+            }
         }
     }
 
