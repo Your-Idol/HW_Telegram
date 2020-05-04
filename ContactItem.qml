@@ -15,10 +15,10 @@ Rectangle {
 
     color: {
         if (selected)
-            return "#4fc1e9"
+            return "#8cb1d6"
         if(area.containsMouse)
-            return "#f1f1f1"
-        return "white";
+            return "gray"
+        return "#5288c1";
     }
 
     width: parent.width
@@ -31,19 +31,26 @@ Rectangle {
         anchors.rightMargin: 4
         Image {
             id: icon
+            fillMode: Image.PreserveAspectCrop
             source: "icons/tg.png"
             Layout.fillHeight: true
             Layout.preferredWidth: height
             Layout.margins: 4
         }
         ColumnLayout{
+            Layout.fillWidth: true
             Label{
+                color: "black"
                 id:label
+                Layout.fillWidth: true
                 font.bold:true
             }
             Label{
+                color: "black"
                 id:lastMessage
+                Layout.fillWidth: true
                 text:"you are not allowed to write messages"
+                elide: Label.ElideRight
             }
         }
     }

@@ -6,6 +6,7 @@ import QtQuick.Layouts 1.13
 RowLayout {
     signal newItem(string text )
     TextField{
+        color: "black"
         id: textFiled
         Layout.fillWidth: true
         selectByMouse: true

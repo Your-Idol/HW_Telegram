@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.13
 
 ColumnLayout{
     TextField{
+        color: "black"
         Layout.leftMargin: 10
         Layout.rightMargin: 10
         Layout.fillWidth: true

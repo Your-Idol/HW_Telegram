@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.13
 
 Window {
     visible: true
-    color: "gray"
+    color: "#5288c1"
     width: 420
     height: 550
     title: qsTr("Contacts")
@@ -60,6 +60,15 @@ Window {
             onTriggered: {
                 contactsModel.remove(list.menuIndex);
             }
+        }
+        MenuItem{
+            text: "Show Profile"
+        }
+        MenuItem{
+            text: "Disable Notifications"
+        }
+        MenuItem{
+            text: "Clear the History"
         }
     }
 
